@@ -1,0 +1,10 @@
+POST http://localhost:8080/posts
+Content-Type: application/json
+
+{
+    "teaser": "teaser hello",
+    "title": "title hello",
+    "img": "img hello",
+    "imagecredit": "imagecredit hello",
+    "text": "text hello"
+  }
