@@ -26,6 +26,13 @@ app
     res.send(postData);
   });
 
+app
+.route("/posts/:id")
+.get(async(req, res) => {
+  const post = await Post.find({_id: req.params.id});
+  res.json(post)
+})
+
 connectToDB().then(() => {
   app.listen(port, console.log("STARTED LISTENING ON PORT " + port));
 });
