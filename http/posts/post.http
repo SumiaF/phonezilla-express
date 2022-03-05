@@ -2,9 +2,9 @@ POST http://localhost:8080/posts
 Content-Type: application/json
 
 {
-    "teaser": "Why are images not working",
-    "title": "Creating A Document From Server",
-    "img": "justanormalimagefile.jpeg",
+    "teaser": "Samsung's Most Powerful S Series Phone Yet",
+    "title": "The Galaxy S22 Ultra to be released on Feb 25.",
+    "img": "S22.png",
     "imagecredit": "justanormalimagefile",
     "text": "Some markdown words nothing special yet"
   }
