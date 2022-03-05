@@ -1,0 +1,7 @@
+POST http://localhost:8080/hero/
+Content-Type: application/json
+
+{
+    "heading": "Read the latest news about your favourite item",
+    "img": "nordwood-themes-q8U1YgBaRQk-unsplash_cropped.jpeg"
+  }
