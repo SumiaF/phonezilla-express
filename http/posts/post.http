@@ -2,9 +2,9 @@ POST http://localhost:8080/posts
 Content-Type: application/json
 
 {
-    "teaser": "teaser hello",
-    "title": "title hello",
-    "img": "img hello",
-    "imagecredit": "imagecredit hello",
-    "text": "text hello"
+    "teaser": "Why are images not working",
+    "title": "Creating A Document From Server",
+    "img": "justanormalimagefile.jpeg",
+    "imagecredit": "justanormalimagefile",
+    "text": "Some markdown words nothing special yet"
   }

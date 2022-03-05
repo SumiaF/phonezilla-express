@@ -5,18 +5,21 @@ const app = express();
 const port = process.env.PORT || 8080;
 const connectToDB = require("./models");
 const Post = require("./models/Posts");
+const cors = require("cors")
 
+// Middleware
 app.use((req, res, next) => {
   console.log(req.method, req.path);
   next();
 });
-
+app.use(express.static("./public/"))
 app.use(express.json());
+app.use(cors())
 
 app
   .route("/posts")
   .get(async (req, res) => {
-    const posts = await Post.find({});
+    const posts = await Post.find({}).sort({createdAt: -1});
     // if (posts) {
     res.json(posts);
     // }
@@ -29,8 +32,8 @@ app
 app
 .route("/posts/:id")
 .get(async(req, res) => {
-  const post = await Post.find({_id: req.params.id});
-  res.json(post)
+    const post = await Post.find({_id: req.params.id});
+    res.json(post) 
 })
 
 connectToDB().then(() => {
